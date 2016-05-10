@@ -10,7 +10,7 @@ h2. Links
 
 h2. Required Plugins for RSS Feed
 * "aks_header":http://makss.uaho.net/plugins/aks_header
-* "rah_hunction":http://rahforum.biz/plugins/rah_function
+* "rah_function":http://rahforum.biz/plugins/rah_function
 
 h2. mkp_if_ia
 
