@@ -20,7 +20,7 @@ You will need to create an "RSS Feed":https://developers.facebook.com/docs/insta
 
 h5. Create a new section. I called mine 'ia.' This is the page template.
 
-bc.
+<pre><code>
 <txp:aks_header name="Content-Type" value="application/rss+xml" strip="0" gzip="1" nodebug="1" /><?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
  <channel>
@@ -32,10 +32,11 @@ bc.
   <txp:article_custom form="ia" section="article" />
  </channel>
 </rss>
+</code></pre>
 
 h5. I made an article template - also called 'ia'
 
-bc.
+<pre><code>
 <item>
 <title><txp:title /></title>
 <content:encoded>
@@ -53,6 +54,7 @@ bc.
 <pubDate><txp:posted format="%a, %d %b %G %T %Z" /></pubDate>
 <author><txp:author /></author>
 </item>
+</code></pre>
 
 You can see an example of the results: "http://ampdemo.cmsstyles.com/ia/":http://ampdemo.cmsstyles.com/ia/
 
