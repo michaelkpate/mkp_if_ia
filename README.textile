@@ -1,0 +1,69 @@
+h1. mkp_if_ia
+
+This conditional tag examines the url of the current page and determines if the url ends in 'amp.' This allows for a custom page to be rendered using the standards for Google's Accelerated Mobile Pages Project.
+
+h2. Links
+
+* "Github Code Repository":https://github.com/michaelkpate/mkp_if_ia
+* "Download":https://raw.githubusercontent.com/michaelkpate/mkp_if_amp/master/mkp_if_ia.txt
+* "Demo Site":http://ampdemo.cmsstyles.com/
+
+h2. mkp_if_ia
+
+h3. Attributes
+
+h4. None
+
+h3. Examples
+
+You will need to create an "RSS Feed":https://developers.facebook.com/docs/instant-articles/publishing/setup-rss-feed that meets Facebook's requirements for Instant Articles.
+
+h5. Create a new section. I called mine 'ia.' This is the page template.
+
+bc.
+<txp:aks_header name="Content-Type" value="application/rss+xml" strip="0" gzip="1" nodebug="1" /><?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+ <channel>
+  <title><txp:site_name /></title>
+  <description><txp:site_slogan /> - instant articles feed</description>
+  <link><txp:link_to_home /></link>
+  <atom:link href="<txp:link_to_home /><txp:page_url type="s" />/" rel="self" type="application/rss+xml" />
+  <pubDate><txp:rah_function call="safe_strftime" str="rfc822" /></pubDate>
+  <txp:article_custom form="ia" section="article" />
+ </channel>
+</rss>
+
+h5. I made an article template - also called 'ia'
+
+bc.
+<item>
+<title><txp:title /></title>
+<content:encoded>
+ <![CDATA[
+  <txp:body />
+ ]]>
+</description>
+<guid><txp:permlink /></guid>
+<description>
+ <txp:rah_function call="strip_tags">
+	<txp:body />
+ </txp:rah_function>
+</description>
+<link><txp:permlink />ia/</link>
+<pubDate><txp:posted format="%a, %d %b %G %T %Z" /></pubDate>
+<author><txp:author /></author>
+</item>
+
+You can see an example of the results: "http://ampdemo.cmsstyles.com/ia/":http://ampdemo.cmsstyles.com/ia/
+
+You will want something similar to this in your individual article template to display the alternative formatting.
+
+bc. <txp:mkp_if_ia>
+ <txp:output_form form="layout_archives_ia" />
+<txp:else />
+ <txp:output_form form="layout_archives_standard" />
+</txp:_mkp_if_amp>
+
+h3. Release History
+
+Version 1.0: May 10th, 2016
