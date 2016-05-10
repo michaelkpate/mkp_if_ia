@@ -8,6 +8,10 @@ h2. Links
 * "Download":https://raw.githubusercontent.com/michaelkpate/mkp_if_amp/master/mkp_if_ia.txt
 * "Demo Site":http://ampdemo.cmsstyles.com/
 
+h2. Required Plugins for RSS Feed
+* "aks_header":http://makss.uaho.net/plugins/aks_header
+* "rah_hunction":http://rahforum.biz/plugins/rah_function
+
 h2. mkp_if_ia
 
 h3. Attributes
