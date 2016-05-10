@@ -5,7 +5,7 @@ This conditional tag examines the url of the current page and determines if the 
 h2. Links
 
 * "Github Code Repository":https://github.com/michaelkpate/mkp_if_ia
-* "Download":https://raw.githubusercontent.com/michaelkpate/mkp_if_amp/master/mkp_if_ia.txt
+* "Download":https://raw.githubusercontent.com/michaelkpate/mkp_if_ia/master/mkp_if_ia.txt
 * "Demo Site":http://ampdemo.cmsstyles.com/
 
 h2. Required Plugins for RSS Feed
